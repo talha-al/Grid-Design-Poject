@@ -11,12 +11,6 @@ export class SelectComponent implements OnInit {
   @Input() itemArray = { data: [], id: null as any, header: "" } as HeaderModel;
   @Input() id: number = null as any;
   @Output() selectedValue = new EventEmitter<number>();
-
-  change(event: MatSelectChange) {
-    console.log(event);
-    this.selectedValue.emit(event.value);
-  }
-
   model: HeaderModel[] = []
 
   constructor() {
@@ -37,7 +31,9 @@ export class SelectComponent implements OnInit {
     }, 0);
   }
 
-
+  change(event: MatSelectChange) {
+    this.selectedValue.emit(event.value);
+  }
 
   getModel(): HeaderModel[] {
     return JSON.parse(localStorage.getItem('model') || '{}');

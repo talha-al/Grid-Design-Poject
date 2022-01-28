@@ -1,26 +1,4 @@
 <mat-grid-list [cols]="totalColumns" [rowHeight]="rowHeight" style="margin: 0;">
-
-  <!-- <mat-grid-tile *ngFor="let tile of headers">
-    <mat-grid-tile-header> {{tile}}
-    </mat-grid-tile-header>
-  </mat-grid-tile> -->
-
-  <!--
-  <mat-grid-tile *ngFor="let tile of gridList" [colspan]="tile.colSpan" [rowspan]="tile.rowSpan">
-    <mat-grid-tile-header> {{tile.header}}
-    </mat-grid-tile-header>
-
-  </mat-grid-tile>
-
-  <div *ngFor="let count of gridList;index as index ">
-    <mat-grid-tile *ngFor="let data of gridList;index as idx" [colspan]="data.colSpan" [rowspan]="data.rowSpan"
-      style="border-bottom:1px solid">
-      {{ count.data[fieldNames[idx]] }}
-    </mat-grid-tile>
-  </div> -->
-
-
-
   <mat-grid-tile *ngFor="let grid of gridList;index as index" [colspan]="grid.colSpan" [rowspan]="grid.rowSpan">
     <mat-grid-tile-header [style.place-content]="textAlign" [style.font-weight]="headerFontWeight"
       [style.font-size]="headerFontSize"> {{grid.header}}
@@ -33,19 +11,4 @@
       {{ count.data[fieldNames[idx]] }}
     </mat-grid-tile>
   </div>
-
-
-
-
-  <!-- <mat-grid-tile [colspan]="1" [rowspan]="1">
-        <div>{{header1}} </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1">
-        <div>{{header2}} </div>
-    </mat-grid-tile>
-
-    <mat-grid-tile [colspan]="1" [rowspan]="1">
-        <div>sdfsdf </div>
-    </mat-grid-tile> -->
-
 </mat-grid-list>
