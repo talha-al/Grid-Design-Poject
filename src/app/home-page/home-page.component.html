@@ -1,0 +1,9 @@
+<app-select [itemArray]="cars" (selectedValue)="getSelectedValue($event)"></app-select>
+<app-select [itemArray]="softwareLanguages" [id]=0 (selectedValue)="getSelectedValue($event)"></app-select>
+<app-select [id]=2></app-select>
+<app-select [id]=8></app-select>
+
+<app-grid-list [dataArray]="dataModel" [fieldNames]="['id','txt','desc','price']"
+  [headers]="['Id','Name','Description','Price']" [totalColumns]="5" [headersColSpan]="[1,2,1,1]"
+  [headersRowSpan]="[1,1,1,1]" textAlign="center" headerFontWeight="500" headerFontSize="16px" cellFontSize="15px">
+</app-grid-list>

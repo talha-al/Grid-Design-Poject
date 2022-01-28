@@ -1,0 +1,8 @@
+<mat-form-field style="padding: 16px; margin: 16px;" appearance="fill">
+    <mat-label>{{itemArray.header}} </mat-label>
+    <mat-select (selectionChange)="change($event)">
+        <mat-option *ngFor="let item of itemArray.data;index as index" [value]="item.id">
+            {{item.name}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
